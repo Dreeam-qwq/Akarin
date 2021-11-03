@@ -11,6 +11,10 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+    - name:
+      run: |
+            git config --global user.email "noreply@github.com"
+            git config --global user.name "noreply"
     - name: Update Submodule
       run: git submodule update --init --recursive
     - name: Build
