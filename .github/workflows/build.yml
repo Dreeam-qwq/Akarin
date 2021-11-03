@@ -11,7 +11,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name:
+    - name: Github config
       run: |
             git config --global user.email "noreply@github.com"
             git config --global user.name "noreply"
