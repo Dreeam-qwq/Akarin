@@ -11,10 +11,12 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+    - name: Update Submodule
+      run: git submodule update --init --recursive
     - name: Build
       run: ./akarin jar
     - name: Upload Akarin
       uses: actions/upload-artifact@v2
       with:
         name: akarin-1.16.5
-        path: target/build/libs
+        path: target
