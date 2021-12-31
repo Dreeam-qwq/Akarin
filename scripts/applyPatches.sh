@@ -91,5 +91,5 @@ function applyPatch {
     fi
 }
 
-(applyPatch Tuinity/Tuinity-API ${FORK_NAME}-API HEAD api $API_REPO 0 2 &&
-applyPatch Tuinity/Tuinity-Server ${FORK_NAME}-Server HEAD server $SERVER_REPO 1 2) || exit 1
+(applyPatch Sustopia/Sustopia-API ${FORK_NAME}-API HEAD api $API_REPO 0 2 &&
+applyPatch Sustopia/Sustopia-Server ${FORK_NAME}-Server HEAD server $SERVER_REPO 1 2) || exit 1

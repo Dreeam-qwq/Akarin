@@ -18,8 +18,8 @@ echo "----------------------------------------"
 # SCRIPT HEADER end
 
 # For a description of this script, see updateUpstream.sh.
-paperworkdir="$basedir/Tuinity/Paper/work"
-paperserverdir="$basedir/Tuinity/Tuinity-Server"
+paperworkdir="$basedir/Sustopia/Paper/work"
+paperserverdir="$basedir/Sustopia/Sustopia-Server"
 papersrcdir="$paperserverdir/src/main/java"
 papernmsdir="$papersrcdir/net/minecraft/server"
 
@@ -31,7 +31,7 @@ papernmsdir="$papersrcdir/net/minecraft/server"
     fi
 )
 
-minecraftversion=$(cat "$basedir"/Tuinity/Paper/work/BuildData/info.json | grep minecraftVersion | cut -d '"' -f 4)
+minecraftversion=$(cat "$basedir"/Sustopia/Paper/work/BuildData/info.json | grep minecraftVersion | cut -d '"' -f 4)
 decompiledir=$paperworkdir/Minecraft/$minecraftversion/spigot
 
 nms="net/minecraft/server"

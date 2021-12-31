@@ -41,11 +41,11 @@ if [[ "$2" == "--resetPaper" ]]; then
 fi
 
 # patch paper
-echo "  $(bashcolor 1 32)(0/$subtasks)$(bashcolorend) - Apply patches of Tuinity.."
+echo "  $(bashcolor 1 32)(0/$subtasks)$(bashcolorend) - Apply patches of Sustopia.."
 echo "  "
-paperVer=$(gethead Tuinity)
+paperVer=$(gethead Sustopia)
 paperdir
-./tuinity patch
+./Sustopia patch
 
 #cd "Paper-Server"
 #mcVer=$($mvncmd -o org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=minecraft_version | sed -n -e '/^\[.*\]/ !{ /^[0-9]/ { p; q } }')
