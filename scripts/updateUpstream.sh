@@ -45,7 +45,7 @@ echo "  $(bashcolor 1 32)(0/$subtasks)$(bashcolorend) - Apply patches of Sustopi
 echo "  "
 paperVer=$(gethead Sustopia)
 paperdir
-./Sustopia patch
+./Airplane patch
 
 #cd "Paper-Server"
 #mcVer=$($mvncmd -o org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=minecraft_version | sed -n -e '/^\[.*\]/ !{ /^[0-9]/ { p; q } }')
