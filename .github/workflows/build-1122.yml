@@ -18,19 +18,16 @@ jobs:
         run: chmod +x scripts/inst.sh
       - name: Build
         run: ./scripts/inst.sh --setup --remote
-
-      - name: Rename Paperclip Jar
-        run: mv build/libs/leaf-paperclip-1.19.3-R0.1-SNAPSHOT-reobf.jar ./leafpurpur-1.19.3.jar
       - name: Upload Akarin
         uses: actions/upload-artifact@v3
         with:
           name: Akarin-1.12.2
-          path: ./leaf-1.19.3.jar
+          path: ./*.jar
       - name: Release Akarin
         uses: marvinpinto/action-automatic-releases@latest
         with:
           title: "Akarin 1.12.2"
           automatic_release_tag: "akarin-1.12.2"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          files: "./leafpurpur-1.19.3.jar"
+          files: "./*.jar"
           prerelease: false
