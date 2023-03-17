@@ -1,0 +1,36 @@
+name: Build Akarin 1.12.2
+on: [ push ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update submodule
+        run: git submodule update --init --recursive
+      - name: Configure Git
+        run: git config --global user.email "no-reply@github.com" && git config --global user.name "Github Actions"
+      - name: Setup java
+        uses: actions/setup-java@v3
+        with:
+          java-version: 8
+          distribution: zulu
+      - name: Grant execute permission for script
+        run: chmod +x scripts/inst.sh
+      - name: Build
+        run: ./scripts/inst.sh --setup --remote
+
+      - name: Rename Paperclip Jar
+        run: mv build/libs/leaf-paperclip-1.19.3-R0.1-SNAPSHOT-reobf.jar ./leafpurpur-1.19.3.jar
+      - name: Upload Akarin
+        uses: actions/upload-artifact@v3
+        with:
+          name: Akarin-1.12.2
+          path: ./leaf-1.19.3.jar
+      - name: Release Akarin
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          title: "Akarin 1.12.2"
+          automatic_release_tag: "akarin-1.12.2"
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          files: "./leafpurpur-1.19.3.jar"
+          prerelease: false
