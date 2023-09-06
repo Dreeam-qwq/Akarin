@@ -23,11 +23,3 @@ jobs:
         with:
           name: Akarin-1.12.2
           path: ./*.jar
-      - name: Release Akarin
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          title: "Akarin 1.12.2"
-          automatic_release_tag: "akarin-1.12.2"
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          files: "./*.jar"
-          prerelease: false
