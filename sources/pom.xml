@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>akarin</artifactId>
+    <artifactId>2b2tteamcore</artifactId>
     <packaging>jar</packaging>
     <version>1.12.2-R0.4-SNAPSHOT</version>
-    <name>Akarin</name>
+    <name>2B2TTEAMCORE</name>
     <url>https://github.com/Akarin-project/Akarin</url>
 
     <properties>
@@ -231,7 +231,7 @@
 
     <!-- This builds a completely 'ready to start' jar with all dependencies inside -->
     <build>
-        <finalName>akarin-${minecraft.version}</finalName>
+        <finalName>2b2tteamcore-${minecraft.version}</finalName>
         <defaultGoal>clean install</defaultGoal> <!-- Paper -->
         <plugins>
             <plugin>
