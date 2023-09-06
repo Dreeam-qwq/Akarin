@@ -24,6 +24,7 @@ jobs:
           name: Akarin-1.12.2
           path: ./*.jar
       - name: Release Akarin
+        if: github.ref_name == 'ver/1.12.2'
         uses: marvinpinto/action-automatic-releases@latest
         with:
           title: "Akarin 1.12.2"
