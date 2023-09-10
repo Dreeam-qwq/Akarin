@@ -50,7 +50,7 @@ public abstract class MixinMinecraftServer {
     
     @Overwrite
     public String getServerModName() {
-        return "2B2TTEAMCORE";
+        return "2B2TTEAM";
     }
     
     @Inject(method = "run()V", at = @At(
